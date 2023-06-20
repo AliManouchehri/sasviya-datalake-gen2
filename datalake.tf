@@ -92,13 +92,22 @@ resource "azurerm_private_endpoint" "pe-subnet-aks" {
 }
 
 # Create DNS A Record
-resource "azurerm_private_dns_a_record" "dns_a" {
-  name                = "${var.prefix}-datalake-sasviya"
+resource "azurerm_private_dns_a_record" "dns_a_mgmt" {
+  name                = "${var.prefix}-datalake-mgmt"
   zone_name           = data.azurerm_private_dns_zone.pdn-datalake.name
   resource_group_name = var.vnet_resource_group_name
-  ttl                 = 300
-  records             = [azurerm_private_endpoint.pe-subnet-misc.private_service_connection.0.private_ip_address,
-                         azurerm_private_endpoint.pe-subnet-aks.private_service_connection.0.private_ip_address]
+  ttl                 = 10
+  records             = [azurerm_private_endpoint.pe-subnet-misc.private_service_connection.0.private_ip_address]
 
-  depends_on = [azurerm_private_endpoint.pe-subnet-misc, azurerm_private_endpoint.pe-subnet-aks]
+  depends_on = [azurerm_private_endpoint.pe-subnet-misc]
+}
+
+resource "azurerm_private_dns_a_record" "dns_a_aks" {
+  name                = "${var.prefix}-datalake-aks"
+  zone_name           = data.azurerm_private_dns_zone.pdn-datalake.name
+  resource_group_name = var.vnet_resource_group_name
+  ttl                 = 10
+  records             = [azurerm_private_endpoint.pe-subnet-aks.private_service_connection.0.private_ip_address]
+
+  depends_on = [azurerm_private_endpoint.pe-subnet-aks]
 }
