@@ -10,3 +10,4 @@ terraform.tfstate
 terraform.tfstate.backup
 .terraform.lock.hcl
 tfvars/dev2.tfvars
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.37.0/linux_amd64/terraform-provider-azurerm_v3.37.0_x5
