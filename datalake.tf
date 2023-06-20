@@ -15,6 +15,7 @@ resource "azurerm_storage_account" "datalake-storage-account" {
     min_tls_version               = "TLS1_2"
     is_hns_enabled                = true
     nfsv3_enabled                 = true
+    sftp_enabled                  = true
 
     identity {
         type = "SystemAssigned"
