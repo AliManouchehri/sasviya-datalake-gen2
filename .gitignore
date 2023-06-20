@@ -1,0 +1,12 @@
+.terraform/providers/registry.terraform.io/hashicorp/azuread/2.38.0/linux_amd64/terraform-provider-azuread_v2.38.0_x5
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/3.54.0/linux_amd64/terraform-provider-azurerm_v3.54.0_x5
+.terraform/providers/registry.terraform.io/hashicorp/cloudinit/2.3.2/linux_amd64/terraform-provider-cloudinit_v2.3.2_x5
+.terraform/providers/registry.terraform.io/hashicorp/external/2.3.1/linux_amd64/terraform-provider-external_v2.3.1_x5
+.terraform/providers/registry.terraform.io/hashicorp/kubernetes/2.20.0/linux_amd64/terraform-provider-kubernetes_v2.20.0_x5
+.terraform/providers/registry.terraform.io/hashicorp/local/2.4.0/linux_amd64/terraform-provider-local_v2.4.0_x5
+.terraform/providers/registry.terraform.io/hashicorp/null/3.2.1/linux_amd64/terraform-provider-null_v3.2.1_x5
+.terraform/providers/registry.terraform.io/hashicorp/tls/4.0.4/linux_amd64/terraform-provider-tls_v4.0.4_x5
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.lock.hcl
+tfvars/dev2.tfvars
